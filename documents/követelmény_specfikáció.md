@@ -11,6 +11,8 @@ Szeretnénk honlapunkra, egszerűen hozzáférhető, kisgyerekek számára letis
 ### Igényelt üzleti folyamatok modellje
 - egy külön menüpont, amelyen keresztül a felhasználó hozzáférhet az alkalmazáshoz
 - az alkalmazáson belül egy ranglista megléte amelyre a játékos feliratkozhat ha szeretne
+- a ranglista egy pontszám alapú rendezett lista
+- több nehézségi fokozat amit a felhasználó beállíthat
 ### A rendszerre vonatkozó szabályok
 - a web felület szabványos eszközökkel készüljön, mint html/css/javascript.
 - a felhasználó adataira vonatkozó jogszabályok betartása
@@ -22,5 +24,5 @@ Szeretnénk honlapunkra, egszerűen hozzáférhető, kisgyerekek számára letis
 - a ranglistán szereplő eredmények tárolása adatbázisban
 - felhasználói által bevitt adatok felülvizsgálata
 ### Fogalomszótár
-- kártya: a játékon belüli, képeket tartalmazó felfordítható mező
-- eredmény: a felhasználó neve és megoldásának időtartama
+- kártya: a játékon belüli, képeket tartalmazó felfordítható és párosítandó mező
+- eredmény: a felhasználó neve és megoldásának időtartama, a pontszám az időből számítható ki
