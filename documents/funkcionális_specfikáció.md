@@ -30,5 +30,10 @@ A megrendelőnek már van rendelkezésre álló dinamikus oldala már több lét
 - több nehézségi fokozat amit a felhasználó beállíthat
 
 ### A rendszerre vonatkozó szabályok
+- a web felület szabványos eszközökkel készüljön, mint html/css/javascript.
+- a felhasználó adataira vonatkozó jogszabályok betartása
+- a fiatalkorúak számára megjeleníthető tartalom jelenhet csak meg
+- trágár és nem odaillő kifejezések kiszűrése
+
 ### Követelménylista
 ### Fogalomszótár
