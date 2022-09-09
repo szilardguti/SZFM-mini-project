@@ -36,20 +36,22 @@ A megrendelőnek már van rendelkezésre álló dinamikus oldala már több lét
 - a játékos tudja regisztrálni az eredményét
 - az alkalmazás oldalán egy vissza gomb segítségével visszaléphetünk a főoldalra
 
+### Használati esetek
+	- a játékos kiválaszthatja a nehézségi szintet (könnyű, közepes, haladó)
+	- nehézségi szinttől függően változik a kártyák száma
+	- a játék végén a felhasználó lehetőséget kap hogy elmentse az eredményét
+	- minden nehézségi fokozatnak más ranglistája van
+	- az eredményt egy MySQL alapú adatbázisba menti a rendszer
 
 ### A rendszerre vonatkozó szabályok
-- a web felület szabványos eszközökkel készüljön, mint html/css/javascript.
-- a felhasználó adataira vonatkozó jogszabályok betartása
-- a fiatalkorúak számára megjeleníthető tartalom jelenhet csak meg
-- trágár és nem odaillő kifejezések kiszűrése
-
-### Követelménylista
-- a felhasználói felület legyen könnyen kezelhető
-- a kártyákon található tartalom legyen fiatalabb gyermekek számára is érdekes és elfogadható
-- a ranglistán szereplő eredmények tárolása adatbázisban
-- felhasználói által bevitt adatok felülvizsgálata
+	- a web felület szabványos eszközökkel készül, mint html/css/javascript.
+	- a felhasználó adataira vonatkozó jogszabályok betartása kerülnek
+	- a fiatalkorúak számára megjeleníthető tartalom jelenik meg
+	- trágár és nem odaillő kifejezések kiszűrésre kerülnek
 
 ### Fogalomszótár
-- kártya: a játékon belüli, képeket tartalmazó felfordítható és párosítandó mező
-- eredmény: a felhasználó neve és megoldásának időpontja,
-  illetve egy pontszám, ami az időből számítható ki
+	- Eredmény: a pontok alapján felvezetett érték a ranglistán
+		- a név egy string
+		- a tárolt pontszám egy egész szám
+		- a játék időpontja
+		- a nehézségi szint egy string
