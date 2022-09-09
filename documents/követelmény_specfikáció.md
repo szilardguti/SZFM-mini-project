@@ -9,6 +9,8 @@ Szeretnénk honlapunkra, egszerűen hozzáférhető, kisgyerekek számára letis
 - iskolával kapcsolatos fontos információk közlése hírfolyamunkon keresztül
 - a felhasználók különböző hozzáférési szintekkel rendelkeznek (tanár, diák, adminisztrátor, vendég)
 ### Igényelt üzleti folyamatok modellje
+- egy külön menüpont, amelyen keresztül a felhasználó hozzáférhet az alkalmazáshoz
+- az alkalmazáson belül egy ranglista megléte amelyre a játékos feliratkozhat ha szeretne
 ### A rendszerre vonatkozó szabályok
 ### Követelménylista
 ### Fogalomszótár
