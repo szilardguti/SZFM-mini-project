@@ -8,6 +8,7 @@ A megrendelőnek már van rendelkezésre álló dinamikus oldala már több lét
 - órarend 
 - szükség esetén tanárokkal való konzultáció belső chat funkcióval
 - osztálynévsor
+
 ### Vágyálomrendszer leírása
 - a weboldal minden oldaláról elérhető egy menüpont amin keresztül hozzáférhető az alkalmazás
 - a menüpont egyértelműen mutatja, hogy a tanulmányokhoz nem kapcsolódóan, egy játékhoz vezet
@@ -16,9 +17,18 @@ A megrendelőnek már van rendelkezésre álló dinamikus oldala már több lét
 - ranglista létrehozása amely regisztrációval látható
 - a ranglistában lévő adatok tárolása adatbázissal
 
-
 ### Jelenlegi üzleti folyamatok
+- minden diákunk saját fiókkal rendelkezik amelyen keresztül elérhető az órarend és az online tananyagok
+- lehetőséget adunk online konzultációkra
+- iskolával kapcsolatos fontos információk közlése hírfolyamunkon keresztül
+- a felhasználók különböző hozzáférési szintekkel rendelkeznek (tanár, diák, adminisztrátor, vendég)
+
 ### Igényelt üzleti folyamatok modellje
+- egy külön menüpont, amelyen keresztül a felhasználó hozzáférhet az alkalmazáshoz
+- az alkalmazáson belül egy ranglista megléte amelyre a játékos feliratkozhat ha szeretne
+- a ranglista egy pontszám alapú rendezett lista
+- több nehézségi fokozat amit a felhasználó beállíthat
+
 ### A rendszerre vonatkozó szabályok
 ### Követelménylista
 ### Fogalomszótár
