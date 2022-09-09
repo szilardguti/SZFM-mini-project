@@ -42,3 +42,6 @@ A megrendelőnek már van rendelkezésre álló dinamikus oldala már több lét
 - felhasználói által bevitt adatok felülvizsgálata
 
 ### Fogalomszótár
+- kártya: a játékon belüli, képeket tartalmazó felfordítható és párosítandó mező
+- eredmény: a felhasználó neve és megoldásának időpontja,
+  illetve egy pontszám, ami az időből számítható ki
