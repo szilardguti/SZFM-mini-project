@@ -12,5 +12,9 @@ Szeretnénk honlapunkra, egszerűen hozzáférhető, kisgyerekek számára letis
 - egy külön menüpont, amelyen keresztül a felhasználó hozzáférhet az alkalmazáshoz
 - az alkalmazáson belül egy ranglista megléte amelyre a játékos feliratkozhat ha szeretne
 ### A rendszerre vonatkozó szabályok
+- a web felület szabványos eszközökkel készüljön, mint html/css/javascript.
+- a felhasználó adataira vonatkozó jogszabályok betartása
+- a fiatalkorúak számára megjeleníthető tartalom jelenhet csak meg
+- trágár és nem odaillő kifejezések kiszűrése
 ### Követelménylista
 ### Fogalomszótár
