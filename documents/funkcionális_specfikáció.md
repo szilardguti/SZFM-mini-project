@@ -37,21 +37,21 @@ A megrendelőnek már van rendelkezésre álló dinamikus oldala már több lét
 - az alkalmazás oldalán egy vissza gomb segítségével visszaléphetünk a főoldalra
 
 ### Használati esetek
-	- a játékos kiválaszthatja a nehézségi szintet (könnyű, közepes, haladó)
-	- nehézségi szinttől függően változik a kártyák száma
-	- a játék végén a felhasználó lehetőséget kap hogy elmentse az eredményét
-	- minden nehézségi fokozatnak más ranglistája van
-	- az eredményt egy MySQL alapú adatbázisba menti a rendszer
+- a játékos kiválaszthatja a nehézségi szintet (könnyű, közepes, haladó)
+- nehézségi szinttől függően változik a kártyák száma
+- a játék végén a felhasználó lehetőséget kap hogy elmentse az eredményét
+- minden nehézségi fokozatnak más ranglistája van
+- az eredményt egy MySQL alapú adatbázisba menti a rendszer
 
 ### A rendszerre vonatkozó szabályok
-	- a web felület szabványos eszközökkel készül, mint html/css/javascript.
-	- a felhasználó adataira vonatkozó jogszabályok betartása kerülnek
-	- a fiatalkorúak számára megjeleníthető tartalom jelenik meg
-	- trágár és nem odaillő kifejezések kiszűrésre kerülnek
+- a web felület szabványos eszközökkel készül, mint html/css/javascript.
+- a felhasználó adataira vonatkozó jogszabályok betartása kerülnek
+- a fiatalkorúak számára megjeleníthető tartalom jelenik meg
+- trágár és nem odaillő kifejezések kiszűrésre kerülnek
 
 ### Fogalomszótár
-	- Eredmény: a pontok alapján felvezetett érték a ranglistán
-		- a név egy string
-		- a tárolt pontszám egy egész szám
-		- a játék időpontja
-		- a nehézségi szint egy string
+- Eredmény: a pontok alapján felvezetett érték a ranglistán
+	- a név egy string
+	- a tárolt pontszám egy egész szám
+	- a játék időpontja
+	- a nehézségi szint egy string
