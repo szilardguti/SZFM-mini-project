@@ -32,4 +32,5 @@ Szeretnénk honlapunkra, egszerűen hozzáférhető, kisgyerekek számára letis
 
 ### Fogalomszótár
 - kártya: a játékon belüli, képeket tartalmazó felfordítható és párosítandó mező
-- eredmény: a felhasználó neve és megoldásának időtartama, a pontszám az időből számítható k
+- eredmény: a felhasználó neve és megoldásának időpontja,
+  illetve egy pontszám, ami az időből számítható ki
