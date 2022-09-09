@@ -22,3 +22,5 @@ Szeretnénk honlapunkra, egszerűen hozzáférhető, kisgyerekek számára letis
 - a ranglistán szereplő eredmények tárolása adatbázisban
 - felhasználói által bevitt adatok felülvizsgálata
 ### Fogalomszótár
+- kártya: a játékon belüli, képeket tartalmazó felfordítható mező
+- eredmény: a felhasználó neve és megoldásának időtartama
