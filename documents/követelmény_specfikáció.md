@@ -12,10 +12,9 @@ Szeretnénk honlapunkra, egszerűen hozzáférhető, kisgyerekek számára letis
 - hírek megosztása a hírfolyamon => minden felhasználó megtekintheti => magasabb szintű felhasználók módosíthatják, moderálhatják a hírfolyamot
 
 ### Igényelt üzleti folyamatok modellje
-- egy külön menüpont, amelyen keresztül a felhasználó hozzáférhet az alkalmazáshoz
-- az alkalmazáson belül egy ranglista megléte amelyre a játékos feliratkozhat ha szeretne
-- a ranglista egy pontszám alapú rendezett lista
-- több nehézségi fokozat amit a felhasználó beállíthat
+- menüpont megnyitása => A felhasználó hozzá fér az alkaplmazásokhoz
+- alkalmazáson belül nehézség kiválasztása => játékban eredmény elérése => elért eredmény mentése 
+=> megjelenítése a ranglistán elért pontszám szerint csökkenő sorrendben
 
 ### A rendszerre vonatkozó szabályok
 - a web felület szabványos eszközökkel készüljön, mint html/css/javascript.
