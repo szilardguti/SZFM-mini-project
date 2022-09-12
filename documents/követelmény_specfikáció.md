@@ -7,10 +7,9 @@ Iskolánk honlapja minden alap (bejelentkezés, órarend, tanári lista, osztál
 Szeretnénk honlapunkra, egszerűen hozzáférhető, kisgyerekek számára letisztult és használható valamint fogyasztásukra megfelelő tartalommal rendelkező memória játékot.
 
 ### Jelenlegi üzleti folyamatok
-- minden diákunk saját fiókkal rendelkezik amelyen keresztül elérhető az órarend és az online tananyagok
-- lehetőséget adunk online konzultációkra
-- iskolával kapcsolatos fontos információk közlése hírfolyamunkon keresztül
-- a felhasználók különböző hozzáférési szintekkel rendelkeznek (tanár, diák, adminisztrátor, vendég)
+- bejelentkezés saját fiókkal => elérhető az órarend és az online tananyagok => különböző hozzáférési (tanár, diák, adminisztrátor, vendég) szintek más funkciókat érhetnek el
+- online konzultáció => órarendben egyeztethető időpont => chat funkciókon keresztül lebonyolítható a konzultáció
+- hírek megosztása a hírfolyamon => minden felhasználó megtekintheti => magasabb szintű felhasználók módosíthatják, moderálhatják a hírfolyamot
 
 ### Igényelt üzleti folyamatok modellje
 - egy külön menüpont, amelyen keresztül a felhasználó hozzáférhet az alkalmazáshoz
