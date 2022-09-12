@@ -18,17 +18,15 @@ A megrendelőnek már van rendelkezésre álló dinamikus oldala már több lét
 - a ranglistában lévő adatok tárolása adatbázissal
 
 ### Jelenlegi üzleti folyamatok
-- minden diák be tud lépni a bejelentkezési adatok megadásával
-- az érzékeny adatokat titkosítva küldi az adatbázisnak, ami ellenőrzi hogy létezik-e a fiók, 
-  ha igen akkor belépteti
-- ha a fiók nem létezik akkor lehetőség van regisztrációra
-- elfelejtett jelszó esetén egy visszaigazoló email küldése
-- oldalon belüli chat funkció biztosítja a konzultáció lehetőségét 
-  pedagógus-diák illetve diák-diák között
-- a chat alkalmas képek és videók megosztására
-- hírfolyam, amelyen keresztül iskolával kapcsolatos fontos információk megjeleníthetőek
-- a feltöltött információk között lehet keresni
-- pedagógus és adminisztrátori jogosultságokkal lehetséges a hírfolyamba való feltöltés
+- bejelentkezési adatok megadása => az érzékeny adatokat titkosítva küldése az adatbázisnak => 
+ellenőrzés, hogy létezik-e a fiók és jók-e a megadott adatok 
+=> ha igen, felhasználó beléptetése
+=> ha a fiók nem létezik akkor lehetőség van regisztrációra
+- elfelejtett jelszó gombra kattintás => visszaigazoló email küldése => új jelszó kötelező beállítása belépéskor
+- oldalon belüli chat funkció => üzenet küldése => adatbázisba mentése => fogadó oldalon megjelenítése
+=> képek és videók megosztása chaten => adatbázisban tárolás => megjelenítés beszélgetésekben
+- iskolával kapcsolatos információk, képek és videók feltöltése => hírportálon megjelenítés => hírek közötti keresési lehetőség
+=> pedagógus és adminisztrátori jogosultságokkal további módosítások elvégzése, moderálás
 
 ### Igényelt üzleti folyamatok modellje
 ![folyamatábra](./funkspec_igenyelt_folyamatok.png)
