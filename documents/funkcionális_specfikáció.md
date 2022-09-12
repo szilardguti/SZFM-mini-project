@@ -31,10 +31,7 @@ A megrendelőnek már van rendelkezésre álló dinamikus oldala már több lét
 - pedagógus és adminisztrátori jogosultságokkal lehetséges a hírfolyamba való feltöltés
 
 ### Igényelt üzleti folyamatok modellje
-- egy menüpontra kattintva megjelenik az alkalmazás
-- az játék ezt követően egy gombra kattintva elindítható
-- a játékos tudja regisztrálni az eredményét
-- az alkalmazás oldalán egy vissza gomb segítségével visszaléphetünk a főoldalra
+![folyamatábra](./funkspec_igenyelt_folyamatok.png)
 
 ### Használati esetek
 - a játékos kiválaszthatja a nehézségi szintet (könnyű, közepes, haladó)
