@@ -9,6 +9,12 @@
 - Mindenki megtalálja a számára kihívást jelentő nehézségi szintet, ezzel maximalizálható a játék által nyújtott élmény
 
 ### Projekt terv
+Csapatunkat három lelkes fiatal úriember alkotja. Természetesen mindenki egyformán kiveszi a részét a munkából. Fontosabb szerepkörök:
+- Frontend
+- Backend
+- Adatbázis létrehozása
+
+A megrendelővel megtárgyalt dolgok alapján fogjuk elvégezni az alkalmazás létrehozását. 
 
 ### Üzleti folyamatok modellje
 
