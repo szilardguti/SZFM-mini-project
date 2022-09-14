@@ -36,6 +36,7 @@ A játék menete:
 - Ha a két kártya párt alkot, úgy azok eltűnnek a játéktérről
 - A játék akkor ér véget, ha a játékos megtalálta az összes párt
 - A játék végeztével az óra megáll és megjelenik a ranglista a regisztrált játékosok neveivel és pontjaival
+![játékmenet ábra](./rendszerterv-játékmenet.png)
 
 Pontrendszer:
 A játékos pontjai az egységnyi idő alatt megtalált párok alapján kerülnek meghatározásra. Minél több időbe telik
