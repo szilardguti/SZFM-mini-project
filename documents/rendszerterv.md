@@ -55,7 +55,11 @@ K03 - A ranglistán szereplő adatok egy MySQL adatbázisban lesznek eltárolva.
 K04 - A felhasználó által megadott név ami a ranglistába kerül, felül lesz vizsgálva, nem odaillő kifejezések elkerülése végett.
       Ehhez egy txt fájlban összegyűjtött kifejezéseket tartalmazó dokumentumot használunk.
 ### Fizikai környezet
+Az alkalmazás futtatására valamilyen böngészőre van szükség pl:
+- Google Chrome
+- Mozilla Firefox
 
+Webre való fejlesztés miatt frontendre és backend részekre osztjuk a fejlesztési környezteket.
 ### Absztrakt domain
 
 ### Adatbázis terv
