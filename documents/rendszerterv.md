@@ -47,6 +47,12 @@ Pontok számítási módja:
 > [nehézség szerint növekvő alapérték] - [játékban eltelt másodpercek egészre kerekítve]
 
 ### Funkcionális terv
+- A fejlesztés html, css és javascript nyelveken történik
+- A játékos nevét egy text típusú html form kéri be
+- A nehézségi fokozat kiválasztása egy radio típusú html form használatának segítségével valósul meg
+- Ennek alapján generálódik le javascripttel a megfelelő számú kártya
+- (A ranglistába menteni kívánt eredmény)
+- A pontok kiszámításáról és az eltelt idő számolásáról is a javascript gondoskodik
 
 ### Követelmények
 - K01 - Könnyen kezelhető weboldal, letisztult felhasználói felület
