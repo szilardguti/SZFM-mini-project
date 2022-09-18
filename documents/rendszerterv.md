@@ -76,7 +76,38 @@ Webre való fejlesztés miatt frontendre és backend részekre osztjuk a fejlesz
 - Visual Studio Code
 - MySQL
 
-### Absztrakt domain
+### Absztrakt domain modell
+
+#### Domain specifikáció
+
+Az alkalmazás három fő részből áll össze:
+1. Frontend fejlesztése:
+	- Alapvető dizájn elemek megtervezése
+	- Felhasználói adatok biztonságos továbbításának/megjelenítésének tervezése
+	- Kliensoldali funkciók fejlesztése
+2. Backend fejlesztése:
+	- Beérkező adatok feldolgozását megvalósító funkciók fejlesztése üzleti logika alapján
+	- Adatbázis és Backend kapcsolatának megtervezése
+	- Különböző HTTP kérések kezelésének kigondolása
+3. Adatbázis tervezés:
+	- Adattábla értékek megtervezése
+	- Adatok biztonságos tárolásának, kezelésének tervezése
+
+#### Fogalmak
+
+- **Frontend:** A weboldal interaktív, a felhasználó által hozzáférhető része az alkalmazásnak, csak korlátozott adatot tekinthet meg.
+
+- **Backend:** Az alkalmazás azon része, amely a Frontend-ről érkező adatok feldolgozásáért felelős, az adatbázis felé továbbítja ezeket. 
+
+- **Adatbázis:** Az adatok perzisztens tárolására szolgál, ahonnan a Backend elérheti és felhasználhatja, valamint továbbíthatja a felhaszáló felé.
+	- **Perzisztens adattárolás:** Adatok hosszútávú tárolása.
+
+#### Absztrakt komponensek, ezek kapcsolatai
+
+- A felhasználó *Frontend* interaktív komponenseivel kezelheti a weboldalt és elérheti a játék alkalmazást, ez a weben látható rész. Kapcsolatban áll a *Backend* résszel, amiből megkapja például az eddig elért eredményeket.
+- A *Backend* felelős a *Frontend* felől érkező adatok kezeléséért, valamint feldolgozásáért, ezután továbbításáért az *Adatbázis* felé. Például a beérkező adatokból
+ pontszámot számít ki, melyet majd továbbít, hogy az letárolódjon.
+ - Az *Adatbázis* komponens teszi lehetővé a perzisztens adattárolást, azaz az adatok maradandó és hosszútávú tárolását. Kapcsolatban áll a *Backend*-el, például innen érkezik a *Adatbázis*hoz a tárolandó eredmény, és hozzá küldi a már eddig letárolt rekordokat.
 
 ### Adatbázis terv
 Az oldal már tartalmaz adatbázist amelyben a bejelentkezési adatok vannak tárolva. Készülni fog hozzá egy tábla,
