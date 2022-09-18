@@ -76,3 +76,4 @@ Az oldal már tartalmaz adatbázist amelyben a bejelentkezési adatok vannak tá
 amely a ranglista adatait fogja tartalmazni. A ranglista tábla és a bejelentkezési adatok közötti kapcsolatot
 a felhasználói ID fogja biztosítani.
 ### Tesztterv
+A tesztelésre folyamatosan sor kerül a fejlesztés alatt, valamint annak befejeztével is. Törekszünk a hibamentességre.
