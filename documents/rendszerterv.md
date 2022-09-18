@@ -19,6 +19,8 @@ A megrendelővel megtárgyalt dolgok alapján fogjuk elvégezni az alkalmazás l
 ### Üzleti folyamatok modellje
 
 A felhasználó az iskolai weboldalt megnyitva egy letisztult, rendezett felületet kap. A memóriajáték a fejlécen található menüpontból lesz elérhető.
+![menu-preview](./menu-preview.png)
+
 Az alkalmazás egy új weboldalon fog megjelenni. Első lépésként a felhasználó megadja a nevét, kiválasztja a nehézségi szintet, 
 majd a kezdés gombra kattintva elkezdheti a kört.
 
@@ -113,6 +115,8 @@ Az alkalmazás három fő részből áll össze:
 Az oldal már tartalmaz adatbázist amelyben a bejelentkezési adatok vannak tárolva. Készülni fog hozzá egy tábla,
 amely a ranglista adatait fogja tartalmazni. A ranglista tábla és a bejelentkezési adatok közötti kapcsolatot
 a felhasználói ID fogja biztosítani.
+
+![adatbázis terv](./umldiagram.png)
 
 ### Tesztterv
 A tesztelésre folyamatosan sor kerül a fejlesztés alatt, valamint annak befejeztével is.
