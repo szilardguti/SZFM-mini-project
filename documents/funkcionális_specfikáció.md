@@ -29,7 +29,7 @@ ellenőrzés, hogy létezik-e a fiók és jók-e a megadott adatok
 => pedagógus és adminisztrátori jogosultságokkal további módosítások elvégzése, moderálás
 
 ### Igényelt üzleti folyamatok modellje
-![folyamatábra](./funkspec_igenyelt_folyamatok.png)
+![folyamatábra](./img/funkspec_igenyelt_folyamatok.png)
 
 ### Használati esetek
 - a játékos kiválaszthatja a nehézségi szintet (könnyű, közepes, haladó)

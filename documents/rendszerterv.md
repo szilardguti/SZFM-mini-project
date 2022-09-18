@@ -19,7 +19,7 @@ A megrendelővel megtárgyalt dolgok alapján fogjuk elvégezni az alkalmazás l
 ### Üzleti folyamatok modellje
 
 A felhasználó az iskolai weboldalt megnyitva egy letisztult, rendezett felületet kap. A memóriajáték a fejlécen található menüpontból lesz elérhető.
-![menu-preview](./menu-preview.png)
+![menu-preview](./img/menu-preview.png)
 
 Az alkalmazás egy új weboldalon fog megjelenni. Első lépésként a felhasználó megadja a nevét, kiválasztja a nehézségi szintet, 
 majd a kezdés gombra kattintva elkezdheti a kört.
@@ -38,7 +38,7 @@ A játék menete:
 - Ha a két kártya párt alkot, úgy azok eltűnnek a játéktérről
 - A játék akkor ér véget, ha a játékos megtalálta az összes párt
 - A játék végeztével az óra megáll és megjelenik a ranglista a regisztrált játékosok neveivel és pontjaival
-![játékmenet ábra](./rendszerterv-játékmenet.png)
+![játékmenet ábra](./img/rendszerterv-játékmenet.png)
 
 Pontrendszer:
 A játékos pontjai az egységnyi idő alatt megtalált párok alapján kerülnek meghatározásra. Minél több időbe telik
@@ -116,7 +116,7 @@ Az oldal már tartalmaz adatbázist amelyben a bejelentkezési adatok vannak tá
 amely a ranglista adatait fogja tartalmazni. A ranglista tábla és a bejelentkezési adatok közötti kapcsolatot
 a felhasználói ID fogja biztosítani.
 
-![adatbázis terv](./umldiagram.png)
+![adatbázis terv](./img/umldiagram.png)
 
 ### Tesztterv
 A tesztelésre folyamatosan sor kerül a fejlesztés alatt, valamint annak befejeztével is.
