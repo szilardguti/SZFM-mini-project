@@ -72,5 +72,7 @@ Webre való fejlesztés miatt frontendre és backend részekre osztjuk a fejlesz
 ### Absztrakt domain
 
 ### Adatbázis terv
-
+Az oldal már tartalmaz adatbázist amelyben a bejelentkezési adatok vannak tárolva. Készülni fog hozzá egy tábla,
+amely a ranglista adatait fogja tartalmazni. A ranglista tábla és a bejelentkezési adatok közötti kapcsolatot
+a felhasználói ID fogja biztosítani.
 ### Tesztterv
