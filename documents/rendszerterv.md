@@ -60,6 +60,15 @@ Az alkalmazás futtatására valamilyen böngészőre van szükség pl:
 - Mozilla Firefox
 
 Webre való fejlesztés miatt frontendre és backend részekre osztjuk a fejlesztési környezteket.
+# Frontend:
+- Visual Studio Code
+- Windows Notepad
+- Notepad++
+
+# Backend:
+- Node.js
+- Visual Studio Code
+- MySQL
 ### Absztrakt domain
 
 ### Adatbázis terv
