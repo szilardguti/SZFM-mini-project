@@ -75,11 +75,27 @@ Webre való fejlesztés miatt frontendre és backend részekre osztjuk a fejlesz
 - Node.js
 - Visual Studio Code
 - MySQL
+
 ### Absztrakt domain
 
 ### Adatbázis terv
 Az oldal már tartalmaz adatbázist amelyben a bejelentkezési adatok vannak tárolva. Készülni fog hozzá egy tábla,
 amely a ranglista adatait fogja tartalmazni. A ranglista tábla és a bejelentkezési adatok közötti kapcsolatot
 a felhasználói ID fogja biztosítani.
+
 ### Tesztterv
-A tesztelésre folyamatosan sor kerül a fejlesztés alatt, valamint annak befejeztével is. Törekszünk a hibamentességre.
+A tesztelésre folyamatosan sor kerül a fejlesztés alatt, valamint annak befejeztével is.
+- Egységtesztek írása függvényekhez
+- Kész alkalmazás tesztelése böngészőben
+
+A tesztelés célja, hogy a megtervezett funkciók rendeltetésszerűen működjenek. A tesztet tesztelő teszteli a tesztelő tesztkörnyezetben, 
+hogy a tesztesetek kiteszetelve teszten kitesznek-e egy teljes tesztet.
+
+#### Főbb tesztrészek:
+- **Egységteszt**: A forráskód egységeit a kapcsolódó vezérlő adatokkal, a felhasználási-és a működtető eljárásokkal 
+együtt tesztelik annak meghatározására, hogy azok elérik-e kitűzött céljukat. 
+Automatizáltak, előre megadott tesztadatokkal, minél nagyobb dimenziókban fedjék le a lehetséges eseteket.
+	- **Tesztadat**: Bizonyos adatok megerősítő módon használhatók fel egy adott funkcióhoz adott bemeneti adat készlet az elvárt eredményt adja-e.
+	Más adatok felhasználhatók arra, hogy kivizsgálják a program azon képességét, hogy hogyan reagál a szokatlan, rendkívüli, kivételes vagy váratlan adatbevitelre.
+- **Funkcionális teszt**: A szoftver rendszert a funkcionális követelmények / specifikációk alapján ellenőrzi.
+A funkcionális tesztek célja a szoftveralkalmazás minden funkciójának tesztelése megfelelő bemenet biztosításával, a kimenetnek a funkcionális követelményekkel való összehasonlításával.
