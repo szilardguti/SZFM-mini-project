@@ -49,10 +49,10 @@ Pontok számítási módja:
 ### Funkcionális terv
 
 ### Követelmények
-K01 - Könnyen kezelhető weboldal, letisztult felhasználói felület
-K02 - A kártyákon szereplő képek gyermekek számára megfelelő tartalmúak
-K03 - A ranglistán szereplő adatok egy MySQL adatbázisban lesznek eltárolva.
-K04 - A felhasználó által megadott név ami a ranglistába kerül, felül lesz vizsgálva, nem odaillő kifejezések elkerülése végett.
+- K01 - Könnyen kezelhető weboldal, letisztult felhasználói felület
+- K02 - A kártyákon szereplő képek gyermekek számára megfelelő tartalmúak
+- K03 - A ranglistán szereplő adatok egy MySQL adatbázisban lesznek eltárolva.
+- K04 - A felhasználó által megadott név ami a ranglistába kerül, felül lesz vizsgálva, nem odaillő kifejezések elkerülése végett.
       Ehhez egy txt fájlban összegyűjtött kifejezéseket tartalmazó dokumentumot használunk.
 ### Fizikai környezet
 Az alkalmazás futtatására valamilyen böngészőre van szükség pl:
