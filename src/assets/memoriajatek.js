@@ -1,7 +1,7 @@
 let startButton = document.getElementsByClassName("startButton")
 let diffLevels = document.forms["chooseDiff"].elements["difficulty"]
 let startMenu = document.getElementsById("difficulty")
-const emojis = ("🍇", "🍉", "🍌", "🍎", "🍑", "🍒", "🥝", "🍄", "🥒")
+const emojis = ("🍇", "🍉", "🍌", "🍎", "🍑", "🍆", "🍒", "🥝", "🍄", "🥒", "🥕", "🥭", "🥑", "🥔", "🍍", "🐻", "🦄", "🦠")
 
 function start(){
     let size
@@ -41,7 +41,17 @@ function fieldInit(x){
 
     for (let i = 0; i < Math.pow(x, 2); i++){
         div = document.createElement("div")
-        div.innerHTML = "uwu"
+        cardFront = document.createElement("div")
+        cardBack = document.createElement("div")
+        cardCont = document.createElement("div")
+        //div.innerHTML = "uwu"
+        cardFront.className = "card-front"
+        cardBack.className = "card-back"
+        cardBack.innerHTML = "🍆"
+        cardCont.className = "card-cont"
+        cardCont.appendChild(cardFront)
+        cardCont.appendChild(cardBack)
+        div.appendChild(cardCont)
         board.appendChild(div)
     }
 
