@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/memoriajatek.css">
+    <title>Memóriajáték</title>
+</head>
+<body>
+    <button class="return-home"><</button>
+    <div id="difficulty">
+        <form name="chooseDiff">
+            <input type="radio" id="easy" name="difficulty" value="easy">
+            <label for="easy">Könnyű</label><br>
+            <input type="radio" id="medium" name="difficulty" value="medium">
+            <label for="medium">Közepes</label><br>
+            <input type="radio" id="hard" name="difficulty" value="hard">
+            <label for="hard">Nehéz</label>
+        </form>
+        <button class="startButton" type="menu" onclick="start()">Kezdés</button>
+    </div>
+    <div class="information">
+        <div class="clock">
+            0:00
+        </div>
+        <div class="score">
+            0 Pont
+        </div>
+    </div>
+    <div id="card-container">
+    </div>
+    <script src="./assets/memoriajatek.js"></script>
+</body>
+</html>

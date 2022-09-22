@@ -1,0 +1,94 @@
+@font-face {
+    font-family: combo;
+    src: url(Combo-Regular.ttf);
+}
+
+*{
+    background-color: rgb(251, 175, 0);
+    font-family: combo;
+}
+
+.return-home{
+    margin-top: 30px;
+    margin-left: 50px;
+    height: 70px;
+    width: 70px;
+    font-size: xx-large;
+    border-radius: 50%;
+    color: rgb(0, 20, 39);
+    background-color: rgb(122, 147, 172);
+    border-color: rgb(0, 34, 66);
+}
+
+@keyframes homebutton {
+    from{
+        width: 70px;
+        color: rgb(0, 34, 66);
+        background-color: rgb(122, 147, 172);
+    }
+    to{
+        width: 140px;
+        color: rgb(122, 147, 172);
+        background-color: rgb(0, 34, 66);
+    }
+}
+
+.return-home:hover{
+    animation-name: homebutton;
+    animation-duration: .33s;
+    animation-iteration-count: 1;
+    color: rgb(122, 147, 172);
+    background-color: rgb(0, 34, 66);
+    width: 140px;
+    cursor: pointer;
+}
+
+.information{
+    margin: auto;
+    text-align: center;
+    font-size: 46px;
+}
+
+.clock{
+    display: inline-block;
+    padding: 30px;
+}
+
+.score{
+    display: inline-block;
+    padding: 30px;
+}
+
+#difficulty{
+    margin: auto;
+    text-align: center;
+    font-size: 38px;
+}
+
+#difficulty > button{
+    display: block;
+    margin-top: 1em;
+    font-size: 44px;
+    margin: auto;
+}
+
+#difficulty > button:hover{
+    cursor: pointer;
+    background-color: black;
+    color: rgb(251, 175, 0);
+}
+
+#card-container{
+    margin: auto;
+    display: grid;
+    grid-gap: 20px;
+}
+#card-container > div{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border: thin solid black;
+    border-radius: 10%;
+    vertical-align: middle;
+    text-align: center;
+}
