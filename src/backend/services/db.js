@@ -1,33 +1,41 @@
 const mysql = require('mysql');
 const config = require('../config');
 
-function connect() {
-    const connection = mysql.createConnection(config.db);
-    connection.connect((err) => {
+const connection = mysql.createConnection(config.db);
+connection.connect((err) => {
     if (err) throw err;
-    console.log('Connected to database!')});
-}
+    console.log('Connected to database!')
+});
 
-function GETquery(sql) {
+
+function GETquery(sql, callback) {
     connection.query(sql, (err, rows) => 
-    {if (err) throw err;
+    {
+        if (err)
+        {
+            console.log(err);
+            return;
+        }
 
-    console.log('Data received from Db:');
-    return rows;
+        console.log('Data received from Db:');
+        return callback(rows); 
     })
 }
 
-function POSTquery(sql, params) {
-    connection.query(sql, (err, rows) => 
-    {if (err) throw err;
-
-    console.log('Data received from Db:');
-    return rows;
+function POSTquery(sql, params, callback) {
+    connection.query(sql, params, (err, results) => 
+    {
+        if (err)
+        {
+            console.log(err);
+            return;
+        }
+        console.log('Data post to db!');
+        return callback(results);
     })
 }
 
 module.exports = {
-    connect,
     GETquery,
     POSTquery
 }

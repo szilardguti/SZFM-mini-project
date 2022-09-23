@@ -1,21 +1,22 @@
 const db = require('./services/db');
 const express = require('express');
 var app = express();
+app.use(express.json());
 
 app.listen(3000, () => console.log('Express server  is running at port no: 3000'));
 
-db.connect();
-
 app.get('/scores', (req, res) => {
-    db.GETquery('SELECT * FROM Scoreboard',(rows) => {
-        console.log(rows);
-        res.json(rows);
-    })
+    var results = db.GETquery('SELECT * FROM Scoreboard ORDER BY points DESC', (getRows) => {
+        console.log(getRows);
+        res.json(getRows);
+    });
 })
 
 app.post('/postToScoreboard', (req, res) => {
-    db.POSTquery('SELECT * FROM Scoreboard',(rows) => {
-        console.log(rows);
-        res.json(rows);
+    const postData = req.body;
+    console.log(postData)
+    db.POSTquery('INSERT INTO Scoreboard SET?', postData, (results) => {
+        console.log(results);
+        res.send(results);
     })
 })
