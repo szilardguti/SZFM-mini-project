@@ -9,7 +9,7 @@
     <title>Memóriajáték</title>
 </head>
 <body>
-    <input type="button" class="return-home" onclick="location.href='kezdooldal.html';" value="Home" />
+    <input type="button" class="return-home" onclick="location.href='kezdooldal.html';" value="Főoldal" />
     <div id="difficulty">
         <form name="chooseDiff">
             <input type="radio" id="easy" name="difficulty" value="easy">
@@ -22,12 +22,8 @@
         <button class="startButton" type="menu" onclick="start()">Kezdés</button>
     </div>
     <div class="information">
-        <div class="clock">
-            0:00
-        </div>
-        <div class="score">
-            0 Pont
-        </div>
+        <div id="clock"></div>
+        <div id="score"></div>
     </div>
     <div id="card-container">
     </div>

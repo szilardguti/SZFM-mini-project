@@ -1,6 +1,9 @@
 let startButton = document.getElementsByClassName("startButton")
 let diffLevels = document.forms["chooseDiff"].elements["difficulty"]
 let startMenu = document.getElementsById("difficulty")
+var clock = document.getElementById("clock")
+var score = document.getElementById("score")
+
 const emojis = ("🍇", "🍉", "🍌", "🍎", "🍑", "🍆", "🍒", "🥝", "🍄", "🥒", "🥕", "🥭", "🥑", "🥔", "🍍", "🐻", "🦄", "🦠")
 
 function start(){
@@ -37,17 +40,15 @@ function fieldInit(x){
     }
     board.style.gridTemplateColumns = numberOfColumns
     board.style.width = width + "px"
-    board.style.margin = "auto"
 
     for (let i = 0; i < Math.pow(x, 2); i++){
         div = document.createElement("div")
         cardFront = document.createElement("div")
         cardBack = document.createElement("div")
         cardCont = document.createElement("div")
-        //div.innerHTML = "uwu"
         cardFront.className = "card-front"
         cardBack.className = "card-back"
-        cardBack.innerHTML = "🍆"
+        document.getElementsByClassName("card-back").innerHTML = "padlizsán emoji"
         cardCont.className = "card-cont"
         cardCont.appendChild(cardFront)
         cardCont.appendChild(cardBack)
@@ -55,8 +56,10 @@ function fieldInit(x){
         board.appendChild(div)
     }
 
+    document.getElementById("clock").innerHTML = "Idő: 0:00"
+    document.getElementById("score").innerHTML = "Pontszám: 0"
     cards = document.getElementsByClassName("card")
     console.log(cards)
-    startMenu.remove()
-
+    document.getElementById("difficulty").remove()
 }
+
