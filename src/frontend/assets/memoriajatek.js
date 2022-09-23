@@ -5,7 +5,8 @@ var clock = document.getElementById("clock")
 var score = document.getElementById("score")
 
 const emojis = ["🍇", "🍉", "🍌", "🍎", "🍑", "🍆", "🍒", "🥝", "🍄", "🥒", "🥕", "🥭", "🥑", "🥔", "🍍", "🐻", "🦄", "🦠"]
-
+var cardChosen = []
+var pairs={pairsfound:0,maxpairs:0}
 const shuffle = array => {
     const clonedArray = [...array]
 
@@ -41,7 +42,7 @@ function start(){
     if (difficulty == "easy")
         size = 16
     else if (difficulty == "medium")
-        size = 25
+        size = 24
     else if (difficulty == "hard")
         size = 36
     else
@@ -56,7 +57,8 @@ function fieldInit(x){
     let board = document.getElementById("card-container")
     let numberOfColumns = ""
     let width = x * 100 + x * 20
-    const picks = pickRandom(emojis, Math.pow(x, 2) / 2) 
+    pairs.maxpairs = Math.ceil(Math.pow(x, 2) / 2)
+    const picks = pickRandom(emojis, pairs.maxpairs) 
     const items = shuffle([...picks, ...picks])
     
     for (let i = 0; i < x; i++){
@@ -80,11 +82,12 @@ function fieldInit(x){
     console.log(cards)
     startMenu.remove()
 }
-const cardkatt = document.getElementsByClassName("card")
 document.addEventListener('click', function (event) {
             var eventTarget = event.target;
             if(eventTarget.className.includes("card")){
-                eventTarget.style.fontSize="50px"
-                console.log(eventTarget)
+                flipCard(eventTarget)
+                //console.log(eventTarget)
+                
             }
-        });
+});
+
