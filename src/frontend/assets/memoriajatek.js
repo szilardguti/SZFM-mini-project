@@ -110,3 +110,19 @@ function checkForMatch(){
         }
         
 }
+function flipCard(card){
+
+    flipUp(card)
+    cardChosen.push(card)
+    if(cardChosen.length===2){
+        checkForMatch()
+        
+    }else if(cardChosen.length>=3)
+    {
+       let tcard = cardChosen.shift()
+       flipDown(tcard)
+       tcard = cardChosen.shift()
+       flipDown(tcard)
+    }
+
+}
