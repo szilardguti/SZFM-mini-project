@@ -116,7 +116,7 @@ Az oldal már tartalmaz adatbázist amelyben a bejelentkezési adatok vannak tá
 amely a ranglista adatait fogja tartalmazni. A ranglista tábla és a bejelentkezési adatok közötti kapcsolatot
 a felhasználói ID fogja biztosítani.
 
-![adatbázis terv](./img/umldiagram.png)
+![adatbázis terv](./img/database.png)
 
 ### Tesztterv
 A tesztelésre folyamatosan sor kerül a fejlesztés alatt, valamint annak befejeztével is.
