@@ -49,12 +49,12 @@
     font-size: 46px;
 }
 
-.clock{
+#clock{
     display: inline-block;
     padding: 30px;
 }
 
-.score{
+#score{
     display: inline-block;
     padding: 30px;
 }
@@ -92,3 +92,4 @@
     text-align: center;
 
 }
+
