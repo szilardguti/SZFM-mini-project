@@ -1,0 +1,9 @@
+const config = {
+  db: {
+    host: "remotemysql.com",
+    user: "XAvcz3AtAl",
+    password: "27CsMuiXNL",
+    database: "XAvcz3AtAl",
+  },
+};
+module.exports = config;
