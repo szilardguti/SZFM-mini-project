@@ -80,4 +80,11 @@ function fieldInit(x){
     console.log(cards)
     startMenu.remove()
 }
-
+const cardkatt = document.getElementsByClassName("card")
+document.addEventListener('click', function (event) {
+            var eventTarget = event.target;
+            if(eventTarget.className.includes("card")){
+                eventTarget.style.fontSize="50px"
+                console.log(eventTarget)
+            }
+        });
