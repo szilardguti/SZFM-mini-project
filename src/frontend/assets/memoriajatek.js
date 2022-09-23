@@ -90,4 +90,23 @@ document.addEventListener('click', function (event) {
                 
             }
 });
-
+function checkForMatch(){
+    
+    if(cardChosen[0].textContent == cardChosen[1].textContent)
+        {
+            
+            pairs.pairsfound++
+            console.log(cardChosen[0].textContent,cardChosen[1].textContent)
+            
+            let tcard = cardChosen.shift()
+            tcard.style.backgroundColor="green"
+            tcard = cardChosen.shift()
+            tcard.style.backgroundColor="green"    
+            
+            if(pairs.pairsfound == pairs.maxpairs)
+                {
+                    alert("yay you win you yay")
+                }
+        }
+        
+}
