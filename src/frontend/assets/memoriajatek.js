@@ -126,3 +126,11 @@ function flipCard(card){
     }
 
 }
+function flipUp(card){
+    card.style.fontSize="50px"
+    card.className="flipped"
+}
+function flipDown(card){
+    card.style.fontSize="0px"
+    card.className="card"
+}
