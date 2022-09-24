@@ -3,7 +3,9 @@ const express = require('express');
 var app = express();
 app.use(express.json());
 
-app.listen(3000, () => console.log('Express server  is running at port no: 3000'));
+const PORT = process.env.PORT || 3030;
+
+app.listen(3000, () => console.log(`Express server is running at port no: ${PORT}`));
 
 app.get('/scores', (req, res) => {
     var results = db.GETquery('SELECT * FROM Scoreboard ORDER BY points DESC', (getRows) => {
