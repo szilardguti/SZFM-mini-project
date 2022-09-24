@@ -1,0 +1,17 @@
+.logo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+}
+.text{
+    text-align: center;
+    margin-left: 500px;
+    margin-right: 500px;
+}
+.div{
+    display: flex;
+}
+.thinker{
+    transform: rotateY(180deg);
+}
