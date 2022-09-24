@@ -3,18 +3,17 @@ let diffLevels = document.forms["chooseDiff"].elements["difficulty"]
 let startMenu = document.getElementById("difficulty")
 var clock = document.getElementById("clock")
 var score = document.getElementById("score")
+var inputField = document.getElementById("username")
 var timer
-var inputField = document.getElementById("username");
 
 const emojis = ["🍇", "🍉", "🍌", "🍎", "🍑", "🍆", "🍒", "🥝", "🍄", "🥒", "🥕", "🥭", "🥑", "🥔", "🍍", "🐻", "🦄", "🦠"]
 var cardChosen = []
-var pairs={pairsfound:0,maxpairs:0}
+var pairs = {pairsfound:0,maxpairs:0}
 var pointSystem = { userPoints : 0 , valueForScore : 0 }
 var seconds = 0
 var minutes = 0
-var username
+var username = ""
 var endTimes = {endMinutes : 0, endSeconds : 0}
-var constDifficulty
 
 function addSecond(startTime){
 
@@ -62,7 +61,7 @@ const pickRandom = (array, items) => {
 
 function start(){
     let size
-    constDifficulty = diffLevels.value
+    let constDifficulty = diffLevels.value
 
     if (constDifficulty == "easy"){
         size = 16
@@ -103,12 +102,10 @@ function fieldInit(x){
     board.style.width = width + "px"
 
     for (let i = 0; i < Math.pow(x, 2); i++){
-        //div = document.createElement("div")
         card = document.createElement("div")
         card.className = "card"
         card.innerHTML = items[i]
         board.appendChild(card)
-        //board.appendChild(div)
     }
 
     clock.innerHTML = "Idő: 0:00"
@@ -123,16 +120,14 @@ function fieldInit(x){
 document.addEventListener('click', function (event) {
             var eventTarget = event.target;
             if(eventTarget.className.includes("card")){
-                flipCard(eventTarget)
-                //console.log(eventTarget)                
+                flipCard(eventTarget)                
             }
 });
 
 function checkForMatch(){
     
     if(cardChosen[0].textContent == cardChosen[1].textContent)
-        {
-            
+        {          
             pairs.pairsfound++
             console.log(cardChosen[0].textContent,cardChosen[1].textContent)
             AddScore()
@@ -148,12 +143,11 @@ function checkForMatch(){
                     clearInterval(timer)
                     endTimes.endMinutes = minutes
                     endTimes.endSeconds = seconds
-
                     submitScore()
                 }
-        }
-        
+        }        
 }
+
 function flipCard(card){
 
     flipUp(card)
@@ -168,23 +162,26 @@ function flipCard(card){
        tcard = cardChosen.shift()
        flipDown(tcard)
     }
+}
 
-}
 function flipUp(card){
-    card.style.fontSize="50px"
-    card.className="flipped"
+    card.style.fontSize = "50px"
+    card.className = "flipped"
 }
+
 function flipDown(card){
-    card.style.fontSize="0px"
-    card.className="card"
+    card.style.fontSize = "0px"
+    card.className = "card"
 }
+
 var submitBtn = document.getElementById("gimbgomb")
 var submitBtnOriValue = document.getElementById("gimbgomb").value;
 
-submitBtn.onmouseover  = function () {
+submitBtn.onmouseover = function(){
     submitBtn.value = "Főoldal"
 }
-submitBtn.onmouseout  = function() {
+
+submitBtn.onmouseout = function(){
     submitBtn.value = submitBtnOriValue;
 }
 
