@@ -21,11 +21,25 @@
         </form>
         <button class="startButton" type="menu" onclick="start()">Kezdés</button>
     </div>
-    <div class="information">
-        <div id="clock"></div>
-        <div id="score"></div>
+        <div class="information">
+            <div id="clock"></div>
+            <div id="score"></div>
+        </div>
+        <div id="card-container">
     </div>
-    <div id="card-container">
+    <div>
+        <table id="scoreTable">
+            <thead>
+                <tr>
+                    <th>Helyezet</th>
+                    <th>Név</th>
+                    <th>Pontok</th>
+                    <th>Teljesített idő</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <button onclick="refreshScoreboard()">refresh</button>
     </div>
     <script src="./assets/memoriajatek.js"></script>
 </body>

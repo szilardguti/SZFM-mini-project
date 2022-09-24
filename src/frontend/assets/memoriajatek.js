@@ -4,16 +4,23 @@ let startMenu = document.getElementById("difficulty")
 var clock = document.getElementById("clock")
 var score = document.getElementById("score")
 var timer
+var inputField = document.getElementById("username");
 
 const emojis = ["🍇", "🍉", "🍌", "🍎", "🍑", "🍆", "🍒", "🥝", "🍄", "🥒", "🥕", "🥭", "🥑", "🥔", "🍍", "🐻", "🦄", "🦠"]
 var cardChosen = []
 var pairs={pairsfound:0,maxpairs:0}
+var pointSystem = { userPoints : 0 , valueForScore : 0 }
+var seconds = 0
+var minutes = 0
+var username
+var endTimes = {endMinutes : 0, endSeconds : 0}
+var constDifficulty
 
 function addSecond(startTime){
 
     let d = Date.now()
-    let seconds = Math.floor((d - startTime) / 1000)
-    let minutes = Math.floor(seconds / 60)
+    seconds = Math.floor((d - startTime) / 1000)
+    minutes = Math.floor(seconds / 60)
     
     if (seconds > 59){
         seconds -= minutes * 60
@@ -55,25 +62,29 @@ const pickRandom = (array, items) => {
 
 function start(){
     let size
-    let difficulty = diffLevels.value
+    constDifficulty = diffLevels.value
 
-    if (difficulty == "easy"){
+    if (constDifficulty == "easy"){
         size = 16
-        valueForScore = 400
+        pointSystem.valueForScore = 400
     }
-    else if (difficulty == "medium"){
+    else if (constDifficulty == "medium"){
         size = 24
-        valueForScore = 500
+        pointSystem.valueForScore = 500
     }
-    else if (difficulty == "hard"){
+    else if (constDifficulty == "hard"){
         size = 36
-        valueForScore = 600
+        pointSystem.valueForScore = 600
     }
     else
         alert("Válassz nehézségi fokozatot!")
 
+    if (inputField.value == "")
+        alert("Add meg a játékos neved!")
+
     if (size != undefined){
         fieldInit(Math.sqrt(size))
+        username = inputField.value;
     }
 }
 
@@ -124,6 +135,7 @@ function checkForMatch(){
             
             pairs.pairsfound++
             console.log(cardChosen[0].textContent,cardChosen[1].textContent)
+            AddScore()
             
             let tcard = cardChosen.shift()
             tcard.style.backgroundColor="green"
@@ -132,8 +144,12 @@ function checkForMatch(){
             
             if(pairs.pairsfound == pairs.maxpairs)
                 {
-                    alert("yay you win you yay")
+                    setInterval(alert("yay you win you yay"), 1000)
                     clearInterval(timer)
+                    endTimes.endMinutes = minutes
+                    endTimes.endSeconds = seconds
+
+                    submitScore()
                 }
         }
         
@@ -170,4 +186,59 @@ submitBtn.onmouseover  = function () {
 }
 submitBtn.onmouseout  = function() {
     submitBtn.value = submitBtnOriValue;
+}
+
+function showScoreBoard(difficulty){
+    var table = document.getElementById('scoreTable');
+    table.style.display = 'flex'
+    let scorePosition = 1
+
+    fetch(`https://memoria.onrender.com/scores?difficulty=${difficulty}`)
+    .then(response => response.json())
+    .then(data => 
+        {data.forEach(score => {
+            var row = table.tBodies[0].insertRow(-1);
+            var cell1 = row.insertCell(0);
+            var cell2 = row.insertCell(1);
+            var cell3 = row.insertCell(2);
+            var cell4 = row.insertCell(3);
+
+            cell1.innerHTML = `<td>` + scorePosition + `</td>`
+            cell2.innerHTML = `<td>` + score.scoreUserName + `</td>`
+            cell3.innerHTML = `<td>` + score.points + `</td>`
+            cell4.innerHTML = `<td>` + score.completionTime + `</td>`
+
+            scorePosition++
+        })})
+}
+
+function refreshScoreboard(){
+    document.getElementById('scoreTable').tBodies[0].innerHTML = '';
+    showScoreBoard(constDifficulty)
+}
+
+function submitScore() {
+    fetch('https://memoria.onrender.com/postToScoreboard', {
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json, text/plain, */*',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            userId: 3,
+            scoreUserName: username, 
+            points: pointSystem.userPoints,
+            completionTime: `000:${endTimes.endMinutes}:${endTimes.endSeconds}`,
+            difficulty : constDifficulty
+        })
+        }).then(res => res.json())
+        .then(jsonRes => showScoreBoard(constDifficulty));
+}
+
+function AddScore() {
+    let addScore = (pointSystem.valueForScore - (minutes * 60 + seconds))
+    if( addScore <= 0 )
+        addScore = 1
+    pointSystem.userPoints += addScore
+    score.innerHTML = pointSystem.userPoints;
 }
