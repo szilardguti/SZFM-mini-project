@@ -3,10 +3,28 @@ let diffLevels = document.forms["chooseDiff"].elements["difficulty"]
 let startMenu = document.getElementById("difficulty")
 var clock = document.getElementById("clock")
 var score = document.getElementById("score")
+var timer
 
 const emojis = ["🍇", "🍉", "🍌", "🍎", "🍑", "🍆", "🍒", "🥝", "🍄", "🥒", "🥕", "🥭", "🥑", "🥔", "🍍", "🐻", "🦄", "🦠"]
 var cardChosen = []
 var pairs={pairsfound:0,maxpairs:0}
+
+function addSecond(startTime){
+
+    let d = Date.now()
+    let seconds = Math.floor((d - startTime) / 1000)
+    let minutes = Math.floor(seconds / 60)
+    
+    if (seconds > 59){
+        seconds -= minutes * 60
+    }
+    if (seconds < 10){
+        seconds = "0" + seconds
+    }
+    
+    clock.innerHTML = "Idő: " + minutes + ":" + seconds
+}
+
 const shuffle = array => {
     const clonedArray = [...array]
 
@@ -39,12 +57,18 @@ function start(){
     let size
     let difficulty = diffLevels.value
 
-    if (difficulty == "easy")
+    if (difficulty == "easy"){
         size = 16
-    else if (difficulty == "medium")
+        valueForScore = 400
+    }
+    else if (difficulty == "medium"){
         size = 24
-    else if (difficulty == "hard")
+        valueForScore = 500
+    }
+    else if (difficulty == "hard"){
         size = 36
+        valueForScore = 600
+    }
     else
         alert("Válassz nehézségi fokozatot!")
 
@@ -81,15 +105,18 @@ function fieldInit(x){
     cards = document.getElementsByClassName("card")
     console.log(cards)
     startMenu.remove()
+    let startTime = Date.now()
+    timer = setInterval(addSecond, 1000, startTime)
 }
+
 document.addEventListener('click', function (event) {
             var eventTarget = event.target;
             if(eventTarget.className.includes("card")){
                 flipCard(eventTarget)
-                //console.log(eventTarget)
-                
+                //console.log(eventTarget)                
             }
 });
+
 function checkForMatch(){
     
     if(cardChosen[0].textContent == cardChosen[1].textContent)
@@ -106,6 +133,7 @@ function checkForMatch(){
             if(pairs.pairsfound == pairs.maxpairs)
                 {
                     alert("yay you win you yay")
+                    clearInterval(timer)
                 }
         }
         
