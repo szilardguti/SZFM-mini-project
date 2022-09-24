@@ -5,6 +5,7 @@ var clock = document.getElementById("clock")
 var score = document.getElementById("score")
 var inputField = document.getElementById("username")
 var timer
+var constDifficulty
 
 const emojis = ["🍇", "🍉", "🍌", "🍎", "🍑", "🍆", "🍒", "🥝", "🍄", "🥒", "🥕", "🥭", "🥑", "🥔", "🍍", "🐻", "🦄", "🦠"]
 var cardChosen = []
@@ -61,7 +62,7 @@ const pickRandom = (array, items) => {
 
 function start(){
     let size
-    let constDifficulty = diffLevels.value
+    constDifficulty = diffLevels.value
 
     if (constDifficulty == "easy"){
         size = 16
