@@ -134,3 +134,12 @@ function flipDown(card){
     card.style.fontSize="0px"
     card.className="card"
 }
+var submitBtn = document.getElementById("gimbgomb")
+var submitBtnOriValue = document.getElementById("gimbgomb").value;
+
+submitBtn.onmouseover  = function () {
+    submitBtn.value = "Főoldal"
+}
+submitBtn.onmouseout  = function() {
+    submitBtn.value = submitBtnOriValue;
+}
