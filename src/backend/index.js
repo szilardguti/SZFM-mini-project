@@ -5,6 +5,8 @@ const cors = require('cors')
 app.use(express.json());
 app.use(cors());
 
+app.options('*', cors())
+
 const PORT = process.env.PORT || 3030;
 
 app.listen(PORT, () => console.log(`Express server is running at port no: ${PORT}`));
