@@ -127,6 +127,30 @@ a felhasználói ID fogja biztosítani.
 
 ![adatbázis terv](./img/database.png)
 
+#### Fizikai adatmodellt legeneráló SQL szkript
+```sql
+CREATE TABLE User (
+    ID INT NOT NULL AUTO_INCREMENT,
+    levelUser INT NOT NULL,
+    email VARCHAR(128) NOT NULL,
+    password CHAR(80) NOT NULL,
+    name VARCHAR(128) NOT NULL,
+    PRIMARY KEY(ID)
+);
+
+CREATE TABLE Scoreboard (
+    ID INT NOT NULL AUTO_INCREMENT,
+    userId INT NOT NULL,
+    scoreUserName VARCHAR(128),
+    points INT NOT NULL,
+    completionTime TIME NOT NULL,
+    difficulty VARCHAR(20) NOT NULL,
+    PRIMARY KEY(ID),
+    CONSTRAINT FK_UserID FOREIGN KEY (userId)
+    REFERENCES User(ID)
+);
+```
+
 ### Tesztterv
 A tesztelésre folyamatosan sor kerül a fejlesztés alatt, valamint annak befejeztével is.
 - Egységtesztek írása függvényekhez
