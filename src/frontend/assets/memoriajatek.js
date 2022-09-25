@@ -6,7 +6,6 @@ var score = document.getElementById("score")
 var inputField = document.getElementById("username")
 var timer
 var constDifficulty
-//var username
 
 const emojis = ["🍇", "🍉", "🍌", "🍎", "🍑", "🍆", "🍒", "🥝", "🍄", "🥒", "🥕", "🥭", "🥑", "🥔", "🍍", "🐻", "🦄", "🦠"]
 var cardChosen = []
@@ -85,7 +84,11 @@ function start(){
         alert("Add meg a játékos neved!")
         inputField.value = ""
     }
-
+    else if (inputField.value.length > 20){
+        alert("Túl hosszú a név")
+        inputField.value = ""
+    }
+    
     if (size != undefined && inputField.value.replaceAll(" ", "") != ""){
         fieldInit(Math.sqrt(size))
         username = inputField.value;
@@ -143,14 +146,13 @@ function checkForMatch(){
             tcard.style.backgroundColor="green"    
             
             if(pairs.pairsfound == pairs.maxpairs)
-                {                   
+                {
                     clearInterval(timer)
                     endTimes.endMinutes = minutes
                     endTimes.endSeconds = seconds
                     submitScore()
-                    setInterval(alert("yay you win you yay"), 1000)
                 }
-        }        
+        }
 }
 
 function flipCard(card){
@@ -191,10 +193,12 @@ submitBtn.onmouseout = function(){
 }
 
 function showScoreBoard(difficulty){
-    //var refreshButton = document.getElementById('refreshButton')
+    var wintext = document.getElementById('youwintext')
+    var endgameButtons = document.getElementById('endgameButtons')
     var table = document.getElementById('scoreTable');
-    table.style.display = 'flex'
-    //refreshButton.style.display = 'block'
+    table.style.display = 'block'
+    endgameButtons.style.display = 'block'
+    wintext.style.display = 'block'
     let scorePosition = 1
 
     fetch(`https://memoria.onrender.com/scores?difficulty=${difficulty}`)
