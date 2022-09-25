@@ -26,3 +26,8 @@ ___
 - Kapott eredmény: A gombok megfelelő működése, UI megfelelő működése és megjelenése, JavaScript megfelelő működése, azonban a profanity lista hiányos
 - Megjegyzés: Teszteltem a nem odaillő szavakat kiszűrő funkciót, és voltak olyanok amiket átengedett. Ezek javítva lettek.
 > A teszt sikeresen lezárult
+
+## Alfa teszt eredményei:
+- nehéz fokozatnál optikai illúzió vehető észre
+- 4:3-as monitornál esetenként a táblázat eltörhet
+- lassú MySQL válasznál adatok duplikálódhatnak igen gomb többszöri lenyomásánál -> javítva
