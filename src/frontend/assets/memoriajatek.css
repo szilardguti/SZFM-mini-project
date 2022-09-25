@@ -86,6 +86,7 @@
 }
 
 #difficulty > .startButton{
+    background-color: rgb(122, 147, 172);
     display: block;
     font-size: 44px;
     margin: auto;
@@ -95,7 +96,7 @@
 #difficulty > .startButton:hover{
     cursor: pointer;
     background-color: black;
-    color: rgb(251, 175, 0);
+    color:rgb(122, 147, 172);
 }
 
 #card-container{
