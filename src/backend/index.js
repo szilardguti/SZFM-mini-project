@@ -27,3 +27,5 @@ app.post('/postToScoreboard', (req, res) => {
         res.send(results);
     })
 })
+
+module.exports = app;

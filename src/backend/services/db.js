@@ -20,7 +20,24 @@ function handleDisconnect() {
   });
 }
 
-handleDisconnect();
+function simpleConnect(){
+  console.log('simple connection to DB server!')
+  connection = mysql.createConnection(config.db);
+}
+
+function simpleDisconnect(){
+  console.log('disconnecting from DB server!')
+  connection.end();
+}
+
+if(process.env.MODE_ENV != 'test'){
+  handleDisconnect();
+}
+else
+{
+  simpleConnect()
+}
+
 
 
 function GETquery(sql, param, callback) {
@@ -32,7 +49,10 @@ function GETquery(sql, param, callback) {
             return;
         }
 
-        console.log('Data received from Db!');
+        if(process.env.MODE_ENV != 'test'){
+          console.log('Data received from Db!');
+        }
+
         return callback(rows); 
     })
 }
@@ -45,12 +65,16 @@ function POSTquery(sql, params, callback) {
             console.log(err);
             return;
         }
-        console.log('Data post to db!');
+        if(process.env.MODE_ENV != 'test'){
+          console.log('Data post to Db!');
+        }
         return callback(results);
     })
 }
 
 module.exports = {
+    simpleConnect,
+    simpleDisconnect,
     GETquery,
     POSTquery
 }
