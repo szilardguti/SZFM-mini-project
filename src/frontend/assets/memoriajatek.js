@@ -6,6 +6,7 @@ var score = document.getElementById("score")
 var inputField = document.getElementById("username")
 var timer
 var constDifficulty
+//var username
 
 const emojis = ["🍇", "🍉", "🍌", "🍎", "🍑", "🍆", "🍒", "🥝", "🍄", "🥒", "🥕", "🥭", "🥑", "🥔", "🍍", "🐻", "🦄", "🦠"]
 var cardChosen = []
@@ -13,7 +14,6 @@ var pairs = {pairsfound:0,maxpairs:0}
 var pointSystem = { userPoints : 0 , valueForScore : 0 }
 var seconds = 0
 var minutes = 0
-var username = ""
 var endTimes = {endMinutes : 0, endSeconds : 0}
 
 function addSecond(startTime){
@@ -63,6 +63,8 @@ const pickRandom = (array, items) => {
 function start(){
     let size
     constDifficulty = diffLevels.value
+    username = ""
+
 
     if (constDifficulty == "easy"){
         size = 16
@@ -79,10 +81,12 @@ function start(){
     else
         alert("Válassz nehézségi fokozatot!")
 
-    if (inputField.value == "")
+    if (inputField.value.replaceAll(" ", "") == ""){
         alert("Add meg a játékos neved!")
+        inputField.value = ""
+    }
 
-    if (size != undefined){
+    if (size != undefined && inputField.value.replaceAll(" ", "") != ""){
         fieldInit(Math.sqrt(size))
         username = inputField.value;
     }
@@ -139,12 +143,12 @@ function checkForMatch(){
             tcard.style.backgroundColor="green"    
             
             if(pairs.pairsfound == pairs.maxpairs)
-                {
-                    setInterval(alert("yay you win you yay"), 1000)
+                {                   
                     clearInterval(timer)
                     endTimes.endMinutes = minutes
                     endTimes.endSeconds = seconds
                     submitScore()
+                    setInterval(alert("yay you win you yay"), 1000)
                 }
         }        
 }
@@ -187,8 +191,10 @@ submitBtn.onmouseout = function(){
 }
 
 function showScoreBoard(difficulty){
+    //var refreshButton = document.getElementById('refreshButton')
     var table = document.getElementById('scoreTable');
     table.style.display = 'flex'
+    //refreshButton.style.display = 'block'
     let scorePosition = 1
 
     fetch(`https://memoria.onrender.com/scores?difficulty=${difficulty}`)
