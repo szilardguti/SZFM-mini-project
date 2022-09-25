@@ -135,6 +135,27 @@
     background-color: rgb(122, 147, 172);
 }
 
+#wannasave{
+    text-align: center;
+    display: none;
+    margin: auto;
+    font-size: 32px;
+    margin-top: 50px;
+}
+
+.upload{
+    font-size: 32px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.upload:hover{
+    cursor: pointer;
+    background-color: black;
+    color:rgb(122, 147, 172);
+
+}
+
 #youwintext{
     display: none;
     font-size: 50px;

@@ -1,5 +1,9 @@
 # Funkcionális specifikáció
 
+### A rendszer céljai és nem céljai
+A rendszer célja szórakoztatni, figyelmet felkellteni, versenyszellemet fejleszti.
+A rendszernek nem célja addiktivitás.
+
 ### Jelenlegi helyzet leírása
 A megrendelőnek már van rendelkezésre álló dinamikus oldala már több létező funkcióval:
 - regisztrálási lehetőség az iskola hallgatói számára
@@ -30,6 +34,22 @@ ellenőrzés, hogy létezik-e a fiók és jók-e a megadott adatok
 
 ### Igényelt üzleti folyamatok modellje
 ![folyamatábra](./img/funkspec_igenyelt_folyamatok.png)
+
+A játék menete:
+- Nehézségi szinttől függően megjelenik a játéktér:
+	- Könnyű: 4x4 kártya (4 sorban és 4 oszlopban jelennek meg)
+	- Közepes: 4x6 kártya (4 sorban és 6 oszlopban jelennek meg)
+	- Nehéz: 6x6 kártya (6 sorban és 6 oszlopban jelennek meg)
+
+- Az oldal tetején elindul egy óra, ezen fog megjelenni az eltelt idő
+- A játékos a kártyák felforgatását úgy idézi elő, hogy az általa kívánt kártyára kattint
+- Felfordításkor a kártyán egy ábra látható, ami alapján felismerhető és párosítható
+- Egyszerre két kártya lehet felfordított állapotban
+- Amennyiben a két felfordított kártya nem alkot egy párt, a harmadik kártya kiválasztására az előző kettő visszaáll eredeti állapotába
+- Ha a két kártya párt alkot, úgy azok egyértelműen mutatják,hogy már nem kiválasztható kártyák
+- A játék akkor ér véget, ha a játékos megtalálta az összes párt
+- A játék végeztével az óra megáll és megjelenik a ranglista a regisztrált játékosok neveivel és pontjaival
+![játékmenet ábra](./img/rendszerterv-játékmenet.png)
 
 ### Használati esetek
 - a játékos kiválaszthatja a nehézségi szintet (könnyű, közepes, haladó)
