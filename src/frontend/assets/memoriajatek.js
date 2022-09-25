@@ -159,7 +159,7 @@ function checkForMatch(){
                     clearInterval(timer)
                     endTimes.endMinutes = minutes
                     endTimes.endSeconds = seconds
-                    submitScore()
+                    askForUpload()
                 }
         }
 }
@@ -202,6 +202,7 @@ submitBtn.onmouseout = function(){
 }
 
 function showScoreBoard(difficulty){
+    document.getElementById("wannasave").style.display = "none"
     var wintext = document.getElementById('youwintext')
     var endgameButtons = document.getElementById('endgameButtons')
     var table = document.getElementById('scoreTable');
@@ -258,4 +259,8 @@ function AddScore() {
         addScore = 1
     pointSystem.userPoints += addScore
     score.innerHTML = pointSystem.userPoints;
+}
+
+function askForUpload(){
+    document.getElementById("wannasave").style.display = "block"
 }
