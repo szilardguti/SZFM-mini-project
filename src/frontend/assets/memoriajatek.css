@@ -93,7 +93,7 @@
     margin-top: 30px;
 }
 
-#difficulty > .startButton:hover{
+#difficulty > .startButton:hover, #refreshButton:hover,#restartgame:hover{
     cursor: pointer;
     background-color: black;
     color:rgb(122, 147, 172);
@@ -158,9 +158,9 @@
     background-color: rgb(122, 147, 172);
     white-space: nowrap;
     margin: auto;
-    display: inline-block;
     width: 195px;
     text-align: center;
+    float:left;
 }
 
 #endgameButtons{
