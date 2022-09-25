@@ -88,11 +88,20 @@ function start(){
         alert("Túl hosszú a név")
         inputField.value = ""
     }
-    
-    if (size != undefined && inputField.value.replaceAll(" ", "") != ""){
-        fieldInit(Math.sqrt(size))
-        username = inputField.value;
-    }
+
+    fetch('https://raw.githubusercontent.com/pogboard/hungarian_profanity_filter/main/profanity_list.json')
+    .then(response => response.json())
+    .then(data => { 
+        if(data.hu.includes(inputField.value))
+            {
+                inputField.value = ""
+            }
+
+        if (size != undefined && inputField.value.replaceAll(" ", "") != ""){
+            fieldInit(Math.sqrt(size))
+            username = inputField.value;
+        }
+     })
 }
 
 function fieldInit(x){
