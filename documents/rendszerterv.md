@@ -35,7 +35,7 @@ A játék menete:
 - Felfordításkor a kártyán egy ábra látható, ami alapján felismerhető és párosítható
 - Egyszerre két kártya lehet felfordított állapotban
 - Amennyiben a két felfordított kártya nem alkot egy párt, a harmadik kártya kiválasztására az előző kettő visszaáll eredeti állapotába
-- Ha a két kártya párt alkot, úgy azok eltűnnek a játéktérről
+- Ha a két kártya párt alkot, úgy azok egyértelműen mutatják,hogy már nem kiválasztható kártyák
 - A játék akkor ér véget, ha a játékos megtalálta az összes párt
 - A játék végeztével az óra megáll és megjelenik a ranglista a regisztrált játékosok neveivel és pontjaival
 ![játékmenet ábra](./img/rendszerterv-játékmenet.png)
@@ -50,7 +50,7 @@ Pontok számítási módja:
 
 ### Funkcionális terv
 - A fejlesztés html, css és javascript nyelveken történik
-- A játékos nevét egy text típusú html form kéri be
+- A játékos nevét egy html input kéri be
 - A nehézségi fokozat kiválasztása egy radio típusú html form használatának segítségével valósul meg
 - Ennek alapján generálódik le javascripttel a megfelelő számú kártya
 - (A ranglistába menteni kívánt eredmény)
